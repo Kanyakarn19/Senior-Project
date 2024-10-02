@@ -50,7 +50,9 @@ def send_to_database(data):
     cursor = conn.cursor()
 
     # Insert data into the database
-    query = "INSERT INTO zone(z1_x, z1_y, z1_z, z2_x, z2_y, z2_z, z3_x, z3_y, z3_z, z4_x, z4_y, z4_z, z5_x, z5_y, z5_z, z6_x, z6_y, z6_z) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+    query = "INSERT INTO zone(z1_x, z1_y, z1_z, z2_x, z2_y, z2_z, z3_x, 
+    z3_y, z3_z, z4_x, z4_y, z4_z, z5_x, z5_y, z5_z, z6_x, z6_y, z6_z) 
+    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
     cursor.execute(query, data)
 
     # Commit changes and close connection
